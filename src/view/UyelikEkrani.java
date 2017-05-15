@@ -5,7 +5,10 @@
  */
 package view;
 
+import dao.UyeDao;
+import dao.imp.UyeDaoImp;
 import javax.swing.ImageIcon;
+import model.Uye;
 
 /**
  *
@@ -82,6 +85,11 @@ public class UyelikEkrani extends javax.swing.JFrame {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jButton1.setText("KAYDOL");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -199,6 +207,18 @@ public class UyelikEkrani extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       Uye uye = new Uye();
+       uye.setIsim(jTextField1.getText());
+       uye.setSoyisim(jTextField2.getText());
+       uye.setAdres(jTextField3.getText());
+       uye.setTelNo(jTextField5.getText());
+       uye.setYas(Integer.valueOf(jTextField4.getText()));
+       UyeDao uyeDao = new UyeDaoImp();
+       uyeDao.insertUye(uye);
+       
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
