@@ -12,7 +12,7 @@ package model;
 public class Ucak {
     
     private int ucakId;
-    private String ucakTürü;
+    private String ucakTuru;
     private int yolcuSayisi;
 
     public int getUcakId() {
@@ -23,12 +23,12 @@ public class Ucak {
         this.ucakId = ucakId;
     }
 
-    public String getUcakTürü() {
-        return ucakTürü;
+    public String getUcakTuru() {
+        return ucakTuru;
     }
 
-    public void setUcakTürü(String ucakTürü) {
-        this.ucakTürü = ucakTürü;
+    public void setUcakTuru(String ucakTuru) {
+        this.ucakTuru = ucakTuru;
     }
 
     public int getYolcuSayisi() {

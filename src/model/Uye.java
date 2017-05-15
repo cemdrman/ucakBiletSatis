@@ -64,7 +64,6 @@ public class Uye {
 
     public void setAdres(String adres) {
         this.adres = adres;
-    }
-    
+    }    
     
 }

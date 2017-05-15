@@ -12,7 +12,7 @@ package model;
 public class Fatura {
     
     private int tutar;
-    private int ödemeTuru;
+    private int odemeTuru;
     private String paraBirimi;
 
     public int getTutar() {
@@ -23,12 +23,12 @@ public class Fatura {
         this.tutar = tutar;
     }
 
-    public int getÖdemeTuru() {
-        return ödemeTuru;
+    public int getOdemeTuru() {
+        return odemeTuru;
     }
 
-    public void setÖdemeTuru(int ödemeTuru) {
-        this.ödemeTuru = ödemeTuru;
+    public void setOdemeTuru(int odemeTuru) {
+        this.odemeTuru = odemeTuru;
     }
 
     public String getParaBirimi() {
