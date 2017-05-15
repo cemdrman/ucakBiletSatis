@@ -21,7 +21,7 @@ public class LoginDao {
     
     private final static Logger LOGGER = Logger.getLogger(LoginDao.class.getName());
 
-    public boolean loginDBcontrol(String username, String password){
+    public boolean loginDBcontrol(String name, String surname){
 
         boolean success = false;
 
@@ -29,11 +29,11 @@ public class LoginDao {
 
         try (Connection con = connection.getConnection()) {
             Statement st = con.createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM uye WHERE email = '"
-                    + username + "'");
+            ResultSet rs = st.executeQuery("SELECT * FROM uye WHERE adi = '"
+                    + name + "'");
             while (rs.next()) {
-                System.out.println(rs.getString("password"));
-                success = password.equals(rs.getString("password"));
+                System.out.println(rs.getString("soyadi"));
+                success = surname.equals(rs.getString("soyadi"));
             }
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(LoginDao.class.getName()).log(Level.SEVERE, null, ex);
